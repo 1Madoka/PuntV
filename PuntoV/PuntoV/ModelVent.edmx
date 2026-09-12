@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PuntoVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="IDC" />
+          </Key>
+          <Property Name="IDC" Type="int" Nullable="false" />
+          <Property Name="Efectivo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Trasferencia" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Credito" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="IDCategoria" />
+          </Key>
+          <Property Name="IDCategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Categoria" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="IDCliente" />
+          </Key>
+          <Property Name="IDCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cliente" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IDProducto" />
+          </Key>
+          <Property Name="IDProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Producto" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="800" />
+          <Property Name="PrecioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Costo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="StockActual" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="LastUpdate" Type="datetime" Nullable="false" />
+          <Property Name="CodigoOficial" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CodigoInterno" Type="varchar" MaxLength="50" />
+          <Property Name="IDCategoria" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VentaDetalle">
+          <Key>
+            <PropertyRef Name="ID_Detalle" />
+          </Key>
+          <Property Name="ID_Detalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDVenta" Type="int" Nullable="false" />
+          <Property Name="IDProducto" Type="int" Nullable="false" />
+          <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioUnitario" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="SubTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CostoUnitarioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="IDVenta" />
+          </Key>
+          <Property Name="IDVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FechaHora" Type="datetime" Nullable="false" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="VentaY" Type="int" Nullable="false" />
+          <Property Name="Semana" Type="int" Nullable="false" />
+          <Property Name="Metodo_pago" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Productos_Categorias">
+          <End Role="Categorias" Type="Self.Categorias" Multiplicity="1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="IDCategoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VentaDetalle_Productos">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="VentaDetalle">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VentaDetalle_Ventas">
+          <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
+          <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ventas">
+              <PropertyRef Name="IDVenta" />
+            </Principal>
+            <Dependent Role="VentaDetalle">
+              <PropertyRef Name="IDVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PuntoVModelStoreContainer">
+          <EntitySet Name="Caja" EntityType="Self.Caja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ventas" EntityType="Self.Ventas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Productos_Categorias" Association="Self.FK_Productos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VentaDetalle_Productos" Association="Self.FK_VentaDetalle_Productos">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VentaDetalle_Ventas" Association="Self.FK_VentaDetalle_Ventas">
+            <End Role="Ventas" EntitySet="Ventas" />
+            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PuntoVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="IDCliente" />
+          </Key>
+          <Property Name="IDCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VentaDetalle">
+          <Key>
+            <PropertyRef Name="ID_Detalle" />
+          </Key>
+          <Property Name="ID_Detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDVenta" Type="Int32" Nullable="false" />
+          <Property Name="IDProducto" Type="Int32" Nullable="false" />
+          <Property Name="Cantidad" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PrecioUnitario" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Ventas" Relationship="Self.FK_VentaDetalle_Ventas" FromRole="VentaDetalle" ToRole="Ventas" />
+          <NavigationProperty Name="Productos" Relationship="PuntoVModel.FK_VentaDetalle_Productos" FromRole="VentaDetalle" ToRole="Productos" />
+          <Property Name="CostoUnitarioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="IDVenta" />
+          </Key>
+          <Property Name="IDVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="VentaDetalle" Relationship="Self.FK_VentaDetalle_Ventas" FromRole="Ventas" ToRole="VentaDetalle" />
+          <Property Name="VentaY" Type="Int32" Nullable="false" />
+          <Property Name="Semana" Type="Int32" Nullable="false" />
+          <Property Name="Metodo_pago" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_VentaDetalle_Ventas">
+          <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
+          <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ventas">
+              <PropertyRef Name="IDVenta" />
+            </Principal>
+            <Dependent Role="VentaDetalle">
+              <PropertyRef Name="IDVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PuntoVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+          <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
+          <EntitySet Name="Ventas" EntityType="Self.Ventas" />
+          <AssociationSet Name="FK_VentaDetalle_Ventas" Association="Self.FK_VentaDetalle_Ventas">
+            <End Role="Ventas" EntitySet="Ventas" />
+            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+          </AssociationSet>
+          <EntitySet Name="Categorias" EntityType="PuntoVModel.Categorias" />
+          <EntitySet Name="Productos" EntityType="PuntoVModel.Productos" />
+          <AssociationSet Name="FK_Productos_Categorias" Association="PuntoVModel.FK_Productos_Categorias">
+            <End Role="Categorias" EntitySet="Categorias" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VentaDetalle_Productos" Association="PuntoVModel.FK_VentaDetalle_Productos">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+          </AssociationSet>
+          <EntitySet Name="Caja" EntityType="PuntoVModel.Caja" />
+        </EntityContainer>
+        <EntityType Name="Categorias">
+          <Key>
+            <PropertyRef Name="IDCategoria" />
+          </Key>
+          <Property Name="IDCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Categoria" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="PuntoVModel.FK_Productos_Categorias" FromRole="Categorias" ToRole="Productos" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IDProducto" />
+          </Key>
+          <Property Name="IDProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Producto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+          <Property Name="PrecioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Costo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="StockActual" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CodigoOficial" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CodigoInterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDCategoria" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categorias" Relationship="PuntoVModel.FK_Productos_Categorias" FromRole="Productos" ToRole="Categorias" />
+          <NavigationProperty Name="VentaDetalle" Relationship="PuntoVModel.FK_VentaDetalle_Productos" FromRole="Productos" ToRole="VentaDetalle" />
+        </EntityType>
+        <Association Name="FK_Productos_Categorias">
+          <End Type="PuntoVModel.Categorias" Role="Categorias" Multiplicity="1" />
+          <End Type="PuntoVModel.Productos" Role="Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categorias">
+              <PropertyRef Name="IDCategoria" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VentaDetalle_Productos">
+          <End Type="PuntoVModel.Productos" Role="Productos" Multiplicity="1" />
+          <End Type="PuntoVModel.VentaDetalle" Role="VentaDetalle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDProducto" />
+            </Principal>
+            <Dependent Role="VentaDetalle">
+              <PropertyRef Name="IDProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Caja">
+          <Key>
+            <PropertyRef Name="IDC" />
+          </Key>
+          <Property Name="IDC" Type="Int32" Nullable="false" />
+          <Property Name="Efectivo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Trasferencia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Credito" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PuntoVModelStoreContainer" CdmEntityContainer="PuntoVEntities">
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="PuntoVModel.Clientes">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VentaDetalle">
+            <EntityTypeMapping TypeName="PuntoVModel.VentaDetalle">
+              <MappingFragment StoreEntitySet="VentaDetalle">
+                <ScalarProperty Name="CostoUnitarioVenta" ColumnName="CostoUnitarioVenta" />
+                <ScalarProperty Name="ID_Detalle" ColumnName="ID_Detalle" />
+                <ScalarProperty Name="IDVenta" ColumnName="IDVenta" />
+                <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ventas">
+            <EntityTypeMapping TypeName="PuntoVModel.Ventas">
+              <MappingFragment StoreEntitySet="Ventas">
+                <ScalarProperty Name="Metodo_pago" ColumnName="Metodo_pago" />
+                <ScalarProperty Name="Semana" ColumnName="Semana" />
+                <ScalarProperty Name="VentaY" ColumnName="VentaY" />
+                <ScalarProperty Name="IDVenta" ColumnName="IDVenta" />
+                <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="PuntoVModel.Categorias">
+              <MappingFragment StoreEntitySet="Categorias">
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="PuntoVModel.Productos">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+                <ScalarProperty Name="CodigoInterno" ColumnName="CodigoInterno" />
+                <ScalarProperty Name="CodigoOficial" ColumnName="CodigoOficial" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+                <ScalarProperty Name="Costo" ColumnName="Costo" />
+                <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Caja">
+            <EntityTypeMapping TypeName="PuntoVModel.Caja">
+              <MappingFragment StoreEntitySet="Caja">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Credito" ColumnName="Credito" />
+                <ScalarProperty Name="Trasferencia" ColumnName="Trasferencia" />
+                <ScalarProperty Name="Efectivo" ColumnName="Efectivo" />
+                <ScalarProperty Name="IDC" ColumnName="IDC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

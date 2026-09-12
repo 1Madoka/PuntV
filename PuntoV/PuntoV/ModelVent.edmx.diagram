@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e4cadc4cb374c0cae8b18bd1a59acf2" Name="Diagram1">
+        <EntityTypeShape EntityType="PuntoVModel.Clientes" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PuntoVModel.VentaDetalle" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PuntoVModel.Ventas" Width="1.5" PointX="5.875" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="PuntoVModel.FK_VentaDetalle_Ventas" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PuntoVModel.Categorias" Width="1.5" PointX="0.5" PointY="4.25" />
+        <EntityTypeShape EntityType="PuntoVModel.Productos" Width="1.5" PointX="0.875" PointY="0.5" />
+        <AssociationConnector Association="PuntoVModel.FK_Productos_Categorias" />
+        <AssociationConnector Association="PuntoVModel.FK_VentaDetalle_Productos" />
+        <EntityTypeShape EntityType="PuntoVModel.Caja" Width="1.5" PointX="5.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

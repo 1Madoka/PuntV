@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PuntoVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Name="IDCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VentaDetalle">
+    <Key>
+      <PropertyRef Name="ID_Detalle" />
+    </Key>
+    <Property Name="ID_Detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDVenta" Type="Int32" Nullable="false" />
+    <Property Name="IDProducto" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Self.FK_VentaDetalle_Ventas" FromRole="VentaDetalle" ToRole="Ventas" />
+    <NavigationProperty Name="Productos" Relationship="PuntoVModel.FK_VentaDetalle_Productos" FromRole="VentaDetalle" ToRole="Productos" />
+    <Property Name="CostoUnitarioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="IDVenta" />
+    </Key>
+    <Property Name="IDVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="VentaDetalle" Relationship="Self.FK_VentaDetalle_Ventas" FromRole="Ventas" ToRole="VentaDetalle" />
+    <Property Name="VentaY" Type="Int32" Nullable="false" />
+    <Property Name="Semana" Type="Int32" Nullable="false" />
+    <Property Name="Metodo_pago" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_VentaDetalle_Ventas">
+    <End Role="Ventas" Type="Self.Ventas" Multiplicity="1" />
+    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="IDVenta" />
+      </Principal>
+      <Dependent Role="VentaDetalle">
+        <PropertyRef Name="IDVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PuntoVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="VentaDetalle" EntityType="Self.VentaDetalle" />
+    <EntitySet Name="Ventas" EntityType="Self.Ventas" />
+    <AssociationSet Name="FK_VentaDetalle_Ventas" Association="Self.FK_VentaDetalle_Ventas">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+    </AssociationSet>
+    <EntitySet Name="Categorias" EntityType="PuntoVModel.Categorias" />
+    <EntitySet Name="Productos" EntityType="PuntoVModel.Productos" />
+    <AssociationSet Name="FK_Productos_Categorias" Association="PuntoVModel.FK_Productos_Categorias">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VentaDetalle_Productos" Association="PuntoVModel.FK_VentaDetalle_Productos">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
+    </AssociationSet>
+    <EntitySet Name="Caja" EntityType="PuntoVModel.Caja" />
+  </EntityContainer>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IDCategoria" />
+    </Key>
+    <Property Name="IDCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Productos" Relationship="PuntoVModel.FK_Productos_Categorias" FromRole="Categorias" ToRole="Productos" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IDProducto" />
+    </Key>
+    <Property Name="IDProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="PrecioVenta" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Costo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="StockActual" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CodigoOficial" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodigoInterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDCategoria" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categorias" Relationship="PuntoVModel.FK_Productos_Categorias" FromRole="Productos" ToRole="Categorias" />
+    <NavigationProperty Name="VentaDetalle" Relationship="PuntoVModel.FK_VentaDetalle_Productos" FromRole="Productos" ToRole="VentaDetalle" />
+  </EntityType>
+  <Association Name="FK_Productos_Categorias">
+    <End Type="PuntoVModel.Categorias" Role="Categorias" Multiplicity="1" />
+    <End Type="PuntoVModel.Productos" Role="Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IDCategoria" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IDCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VentaDetalle_Productos">
+    <End Type="PuntoVModel.Productos" Role="Productos" Multiplicity="1" />
+    <End Type="PuntoVModel.VentaDetalle" Role="VentaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IDProducto" />
+      </Principal>
+      <Dependent Role="VentaDetalle">
+        <PropertyRef Name="IDProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Caja">
+    <Key>
+      <PropertyRef Name="IDC" />
+    </Key>
+    <Property Name="IDC" Type="Int32" Nullable="false" />
+    <Property Name="Efectivo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Trasferencia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Credito" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LastUpdate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

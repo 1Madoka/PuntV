@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PuntoV.exe" version="1.0.0.1" publicKeyToken="c244131f58bfbf6f" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PuntoV" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PuntoV.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="4991352">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/0K8pwRgXhh6u0VSOGixUSjWrxworUCkV51QfTSpU7I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="591752">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qWDdTS8PN7PAn/uVZ8MkJrh5ExDX65NcBMgZw9Rr1J4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PuntoV.exe" size="245672">
+      <assemblyIdentity name="PuntoV" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>d8mdsfO9XEZva8shPkHZlE5MIW7f41ckS8fcKAeJDd4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="img\deleteicon.jpg" size="18555">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aHsk+AxPN58LEexh0lZeLv2hxA4b98EZUTlOa1J1BA4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="img\iconEditar.png" size="5504">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZCxLtUFqQSqRzKmGCLV5KnacJAWPpC3P/DeeVlbBZsM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ModelVent.Context.tt" size="26164">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>S7sZgfpw19asGMUUYbptw1NDM/yKqQu9joykfL6/Kas=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ModelVent.tt" size="28750">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>M0OCBy2XwE3cpRuuqS4XgBqkOgXeNGQJW42hxVC8AfE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PuntoV.exe.config" size="1775">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YEPYnMcCaqmjLJIaS/Vdc18+FajvNTT5XR5bGtWcC/U=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=SOFYPC\roque" issuerKeyHash="f3d4f2ff18eb6c844e400e7513a3f7815dd2255b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>i2/DzSMXlolj6Sy0DDBDVzsaM/u/VHQ0JaVq2rJ/zNQ=</DigestValue></Reference></SignedInfo><SignatureValue>VPaJbpaBzZIKnDIc4Z+FELvZhUCDtPyxF2O3+ak3WUkScocyTdKL5QxsUl3Is0a5JwlJ/ZdJ1xQgIPpJNMTARxmaTYRipEHA+Mk9ezO8h/lIArz9Ta4v8bKTjvSXMOLi+l6xF9SWgpmWu6RV4STnQWqyAnjXv03M/lpQcgWkwTY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>2Sw0C89HGLtwOSctK121NqQDvGJOADP/Ko5hsLLdwEuMDiTHo8M7bAKlZiQ6EeghJtjr07rYiQSyf578OzePx2jOjJJPZQfeGrV1o+1twJrEyE87kUnmQf6h4REL+52Xz1CeG5V0gM0gVyTePwviUVJMkgwzXz7OyjJaoVHFYg0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d4cc7fb2da6aa525347454bffb331a3b5743300cb42ce96389961723cdc36f8b" Description="" Url=""><as:assemblyIdentity name="PuntoV.exe" version="1.0.0.1" publicKeyToken="c244131f58bfbf6f" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SOFYPC\roque</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>tDKU3P1nJc+FU9pG2arNbXcugKSbnSaSx3R6Ef1NyRk=</DigestValue></Reference></SignedInfo><SignatureValue>HAKzUy8L3scjqhn/b17yTA0ChMJrQ2yNBFWTLepgfl8MIN4WaajNcLzciroZT4Nk8c0NH3yA8kvN1fIC1HhRzm64wLC/cAyJ3JX+zZUrgPy5zfcm9ZWJQqKDICZ954O5RwWVU4jq+dJMUsmg/Uv4cJPqYQQCQpsVTdlPIRIGt70=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>2Sw0C89HGLtwOSctK121NqQDvGJOADP/Ko5hsLLdwEuMDiTHo8M7bAKlZiQ6EeghJtjr07rYiQSyf578OzePx2jOjJJPZQfeGrV1o+1twJrEyE87kUnmQf6h4REL+52Xz1CeG5V0gM0gVyTePwviUVJMkgwzXz7OyjJaoVHFYg0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQPNe1rx9DX7FDH2gX8vxkajANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAUwBPAEYAWQBQAEMAXAByAG8AcQB1AGUwHhcNMjYwOTA2MTUzNTU4WhcNMjcwOTA2MjEzNTU4WjAjMSEwHwYDVQQDHhgAUwBPAEYAWQBQAEMAXAByAG8AcQB1AGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANksNAvPRxi7cDknLStdtTakA7xiTgAz/yqOYbCy3cBLjA4kx6PDO2wCpWYkOhHoISbY69O62IkEsn+e/Ds3j8dozoyST2UH3hq1daPtbcCaxMhPO5FJ5kH+oeERC/udl89QnhuVdIDNIFck3j8L4lFSTJIMM18+zsoyWqFRxWINAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAj6/T1hWrHz2rHYsgxonCM1ZP2RnElXnj/SEtHHwlay0mSMccVFpQoZr2qUWDWSbYER15Xe4lLHSJPV8Mielye5gI8RF9eAEOvE45dEUZ7tlKR5LshEUuCD2kADkXw/pMmF6pMIeDKEfMeSWvmJCOiGoOOcVYjgQ9zu3CScGDXq8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

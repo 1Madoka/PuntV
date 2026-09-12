@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PuntoVModelStoreContainer" CdmEntityContainer="PuntoVEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="PuntoVModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VentaDetalle">
+      <EntityTypeMapping TypeName="PuntoVModel.VentaDetalle">
+        <MappingFragment StoreEntitySet="VentaDetalle">
+          <ScalarProperty Name="CostoUnitarioVenta" ColumnName="CostoUnitarioVenta" />
+          <ScalarProperty Name="ID_Detalle" ColumnName="ID_Detalle" />
+          <ScalarProperty Name="IDVenta" ColumnName="IDVenta" />
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="PuntoVModel.Ventas">
+        <MappingFragment StoreEntitySet="Ventas">
+          <ScalarProperty Name="Metodo_pago" ColumnName="Metodo_pago" />
+          <ScalarProperty Name="Semana" ColumnName="Semana" />
+          <ScalarProperty Name="VentaY" ColumnName="VentaY" />
+          <ScalarProperty Name="IDVenta" ColumnName="IDVenta" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHora" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="PuntoVModel.Categorias">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productos">
+      <EntityTypeMapping TypeName="PuntoVModel.Productos">
+        <MappingFragment StoreEntitySet="Productos">
+          <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+          <ScalarProperty Name="CodigoInterno" ColumnName="CodigoInterno" />
+          <ScalarProperty Name="CodigoOficial" ColumnName="CodigoOficial" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="StockActual" ColumnName="StockActual" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Caja">
+      <EntityTypeMapping TypeName="PuntoVModel.Caja">
+        <MappingFragment StoreEntitySet="Caja">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Credito" ColumnName="Credito" />
+          <ScalarProperty Name="Trasferencia" ColumnName="Trasferencia" />
+          <ScalarProperty Name="Efectivo" ColumnName="Efectivo" />
+          <ScalarProperty Name="IDC" ColumnName="IDC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
