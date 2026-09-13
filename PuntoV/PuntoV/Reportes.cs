@@ -110,5 +110,16 @@ namespace PuntoV
             }
         }
 
+        private void buttonDetalles_Click(object sender, EventArgs e)
+        {
+            panelVENTAS.Visible = false;
+            panelDetalles.Visible = true;
+        }
+
+        private void buttonRV_Click(object sender, EventArgs e)
+        {
+            panelVENTAS.Visible = true;
+            panelDetalles.Visible = false;
+        }
     }
 }

@@ -344,5 +344,14 @@ namespace PuntoV
             // Mostrarlo como ventana independiente
             formVentas.Show(); // abre en paralelo
         }
+
+        private void txtCodigoBarras_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonCobrar.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

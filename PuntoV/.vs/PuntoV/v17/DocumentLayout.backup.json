@@ -1,0 +1,191 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\finventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\finventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\finventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\finventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\fventarap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\fventarap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\puntov\\fventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\fventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|c:\\users\\sesquivel\\source\\repos\\puntv\\puntov\\puntov\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\puntov\\formpriccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1143540-CAFC-4EA6-B60B-D96458DAE61F}|PuntoV\\PuntoV.csproj|solutionrelative:puntov\\formpriccs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Producto.cs",
+              "RelativeDocumentMoniker": "PuntoV\\Producto.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Producto.cs",
+              "RelativeToolTip": "PuntoV\\Producto.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswFoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T02:25:56.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Producto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Producto.cs",
+              "RelativeDocumentMoniker": "PuntoV\\Producto.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Producto.cs [Design]",
+              "RelativeToolTip": "PuntoV\\Producto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T02:25:54.439Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Reportes.cs",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Reportes.cs",
+              "RelativeDocumentMoniker": "PuntoV\\Reportes.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Reportes.cs",
+              "RelativeToolTip": "PuntoV\\Reportes.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAkwHcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T02:03:05.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FInventario.cs",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FInventario.cs",
+              "RelativeDocumentMoniker": "PuntoV\\FInventario.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FInventario.cs",
+              "RelativeToolTip": "PuntoV\\FInventario.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T01:56:06.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FInventario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FInventario.cs",
+              "RelativeDocumentMoniker": "PuntoV\\FInventario.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FInventario.cs [Design]",
+              "RelativeToolTip": "PuntoV\\FInventario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T01:56:02.981Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Reportes.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Reportes.cs",
+              "RelativeDocumentMoniker": "PuntoV\\Reportes.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\Reportes.cs [Design]",
+              "RelativeToolTip": "PuntoV\\Reportes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T01:55:56.514Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FVentaRap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FVentaRap.cs",
+              "RelativeDocumentMoniker": "PuntoV\\FVentaRap.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FVentaRap.cs [Design]",
+              "RelativeToolTip": "PuntoV\\FVentaRap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T01:55:34.285Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\App.config",
+              "RelativeDocumentMoniker": "PuntoV\\App.config",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\App.config",
+              "RelativeToolTip": "PuntoV\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-09-13T01:51:35.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FVenta.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FVenta.cs",
+              "RelativeDocumentMoniker": "PuntoV\\FVenta.cs",
+              "ToolTip": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FVenta.cs [Design]",
+              "RelativeToolTip": "PuntoV\\FVenta.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-13T01:51:35.699Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormPriccs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sesquivel\\source\\repos\\PuntV\\PuntoV\\PuntoV\\FormPriccs.cs",
+              "RelativeDocumentMoniker": "PuntoV\\FormPriccs.cs",
+              "ToolTip": "C:\\Users\\roque\\Documents\\Proyectos\\PuntoV\\PuntoV\\FormPriccs.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\roque\\Documents\\Proyectos\\PuntoV\\PuntoV\\FormPriccs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2026-09-13T01:51:35.699Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

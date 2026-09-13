@@ -42,7 +42,7 @@ namespace PuntoV
             var NoStock = PV.Productos.ToList();
 
             labelStock.Text = NoStock.Where(x => x.StockActual == 0).Count().ToString();
-            labelInversion.Text = NoStock.Where(x => x.StockActual != 0).Sum(x=>x.Costo).ToString("N2");
+            labelInversion.Text = NoStock.Where(x => x.StockActual != 0).Sum(x=>x.Costo * x.StockActual).ToString("N2");
         }
 
         private void CargarProductos()
